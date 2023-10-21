@@ -4,11 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="octubre20.js" type="text/javascript">
 </head>
 <body>
     <script type="text/javascript">
-        //Declaración EXPLÍCITA:
+
+        const express = require('express');
+        const app = express();
+        
+        app.get('/', (req, res) => {
+          res.send('Hola Mundo de Node JS!')
+        });
+        
+        app.listen(3000, function() {
+          console.log('Server running on port 3000');
+        });
+        /* Declaración EXPLÍCITA:
         var nombre_persona = "Miguel";
         console.log(nombre_persona)  // -> console.log() Imprime la SALIDA del script en el contexto del servidor o navegador. Equivale al print de python.
         //Declaración EXPLÍCITA 2:
@@ -36,7 +46,7 @@
         // Declaración de CONSTANTES 1:
         const ALTURA = 1.69; 
         console.log(ALTURA)
-        //Al declarar una constante, de debe especificar su nombre EN MAYÚSCULAS (como buena práctica) e inmediatamente asignarle su valor constante. 
+        //Al declarar una constante, de debe especificar su nombre EN MAYÚSCULAS (como buena práctica) e inmediatamente asignarle su valor constante. */
     </script>    
     <p>Hola Mundo JS!</p>
 
